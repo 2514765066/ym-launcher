@@ -63,6 +63,11 @@ export const useLayoutStore = defineStore('layout', () => {
     );
   });
 
+  //节点高度
+  const nodeHeight = computed(() => {
+    return (window.innerHeight - 128 - 70) / config.value.rowCount;
+  });
+
   // 每页可容纳的节点数量
   const pageSize = computed(() => {
     return config.value.rowCount * config.value.colCount;
@@ -213,6 +218,7 @@ export const useLayoutStore = defineStore('layout', () => {
     pageCount,
     isCurrentPageEmpty,
     nodeSize,
+    nodeHeight,
     setSelectedPage,
     setDraggedDesktopPages,
     insertBlankPage,

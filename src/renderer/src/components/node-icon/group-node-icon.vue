@@ -2,7 +2,7 @@
   <div
     class="glass p-[10%] aspect-square grid grid-cols-2 grid-rows-2 gap-[8%] rounded-[24%] transition-transform ease-in-out"
     :style="{
-      width: `${(nodeSize / 10) * 11}px`,
+      width: `${nodeSize * 1.1}px`,
     }"
   >
     <AppNodeIcon

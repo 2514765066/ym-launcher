@@ -1,7 +1,7 @@
 <template>
   <Dialog v-model:open="visible">
     <DialogContent
-      class="dark glass min-w-[calc(80%+32px)] p-4 outline-0 rounded-[48px]"
+      class="dark glass min-w-[80%] px-0 outline-0 rounded-[48px]"
       overlay-class="bg-transparent"
       :aria-describedby="undefined"
       :show-close-button="false"
@@ -13,22 +13,25 @@
       </DialogTitle>
 
       <LauncherContextMenu>
-        <div
+        <section
           ref="contentRef"
           class="size-full grid place-items-center"
           :style="{
-            gridTemplateColumns: `repeat(${config.colCount},1fr)`,
+            gridTemplateColumns: `repeat(${config.colCount}, minmax(0, 1fr))`,
           }"
           data-kind="group-dialog"
           @pointerenter="dragNodeId && handleEnter()"
           @pointerleave="dragNodeId && handleLeave()"
         >
-          <template v-for="id in groupAppIds" :key="id">
-            <div class="w-full flex-center aspect-square" :data-id="id">
-              <LauncherNode :id="id" />
-            </div>
-          </template>
-        </div>
+          <LauncherNode
+            :style="{
+              height: `${nodeHeight * 0.8}px`,
+            }"
+            v-for="id in groupAppIds"
+            :key="id"
+            :id="id"
+          />
+        </section>
       </LauncherContextMenu>
     </DialogContent>
   </Dialog>
@@ -47,6 +50,7 @@ import { useSortable } from '@/hooks/use-sortable';
 import { useLauncherUiStore } from '@/stores/launcher-ui';
 import { useSettingStore } from '@/stores/setting';
 import { useGroupStore } from '@/stores/group';
+import { useLayoutStore } from '@/stores/layout';
 
 // 启动台外观设置
 const { config } = storeToRefs(useSettingStore());
@@ -65,6 +69,8 @@ const { setDragNodeId } = useLauncherUiStore();
 
 // 分组应用数据操作
 const { getGroupAppIds, setGroupAppIds, removeGroupApp } = useGroupStore();
+
+const { nodeHeight } = storeToRefs(useLayoutStore());
 
 // 分组内容容器
 const contentRef = useTemplateRef('contentRef');

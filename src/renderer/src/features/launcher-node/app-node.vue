@@ -15,7 +15,7 @@
       <button
         class="aspect-square p-1 absolute top-0 left-0 -translate-1/4 rounded-full bg-white shadow-lg shadow-black/30"
         :style="{
-          width: `${(nodeSize / 10) * 3}px`,
+          width: `${nodeSize * 0.3}px`,
         }"
         v-if="status == 'remove'"
         @click.stop="removeAppNode(props.data.id)"
