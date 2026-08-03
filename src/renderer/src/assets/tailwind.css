@@ -137,6 +137,8 @@
   }
   body {
     @apply text-foreground;
+    font-family:
+      'Inter', 'Segoe UI', 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;
   }
   .dark {
     @apply text-foreground;
