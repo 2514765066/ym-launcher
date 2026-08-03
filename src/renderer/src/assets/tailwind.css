@@ -6,7 +6,7 @@
 :root {
   --radius: 0.65rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --foreground: oklch(0.25 0 0);
 
   --card: oklch(1 0 0);
   --card-foreground: var(--foreground);
@@ -41,6 +41,11 @@
   --sidebar-accent-foreground: var(--accent-foreground);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
+
+  --glass-shadow1: rgba(255, 255, 255, 0.7);
+  --glass-shadow2: rgba(255, 255, 255, 0.4);
+  --glass-shadow3: rgba(0, 0, 0, 0.5);
+  --glass-brightness: 1.1;
 }
 
 .dark {
@@ -71,6 +76,20 @@
   --border: oklch(100% 0 0 / 0.1);
   --input: oklch(100% 0 0 / 0.15);
   --ring: lab(48.496% 0 0);
+
+  --sidebar: #202020;
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+
+  --glass-shadow1: rgba(255, 255, 255, 0.3);
+  --glass-shadow2: rgba(255, 255, 255, 0.1);
+  --glass-shadow3: rgba(0, 0, 0, 0.25);
+  --glass-brightness: 0.9;
 }
 
 @theme inline {

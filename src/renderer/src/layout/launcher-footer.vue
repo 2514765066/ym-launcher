@@ -1,5 +1,5 @@
 <template>
-  <section class="dark py-5 flex-center">
+  <section class="py-5 flex-center">
     <main
       class="w-fit p-2.5 flex gap-3 rounded-full transition-all"
       :class="{
@@ -9,9 +9,9 @@
       @mouseleave="handleLeave"
     >
       <div
-        class="size-2.5 rounded-full backdrop-blur bg-foreground/30 hover:scale-110 transition-transform"
+        class="size-2.5 rounded-full backdrop-blur bg-background/30 dark:bg-foreground/30 hover:scale-110 transition-transform"
         :class="{
-          'bg-foreground!': selectedPage == index,
+          'bg-background! dark:bg-foreground!': selectedPage == index,
         }"
         v-for="(_, index) in pageCount"
         :key="index"

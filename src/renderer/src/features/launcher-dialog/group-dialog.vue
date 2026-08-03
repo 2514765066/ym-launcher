@@ -1,7 +1,7 @@
 <template>
   <Dialog v-model:open="visible">
     <DialogContent
-      class="dark glass min-w-[80%] px-0 outline-0 rounded-[48px]"
+      class="glass min-w-[80%] px-0 outline-0 rounded-[48px] border-0"
       overlay-class="bg-transparent"
       :aria-describedby="undefined"
       :show-close-button="false"
@@ -61,7 +61,7 @@ const { getNode } = useNodeStore();
 // 分组拆分能力
 const { breakGroupNode } = useCoreStore();
 
-// 启动台拖拽和桌面隐藏状态
+// 启动台拖拽与桌面隐藏状态
 const { dragNodeId, hiddenDesktop } = storeToRefs(useLauncherUiStore());
 
 // 启动台拖拽状态操作

@@ -1,5 +1,5 @@
 <template>
-  <section class="dark size-full flex-center flex-col gap-2" :data-id="data.id">
+  <section class="size-full flex-center flex-col gap-2" :data-id="data.id">
     <div
       class="flex-center flex-col"
       :data-id="data.id"
@@ -32,6 +32,7 @@ const emits = defineEmits<{
   click: [];
 }>();
 
+// 启动台搜索状态
 const { isSearching } = storeToRefs(useLauncherUiStore());
 const { setStatus } = useLauncherUiStore();
 const { config } = storeToRefs(useSettingStore());

@@ -24,7 +24,7 @@
     </template>
   </Button>
 
-  <Tooltip :is-dark="false" content="清空快捷键">
+  <Tooltip content="清空快捷键">
     <Button variant="outline" size="icon-sm" @click="clearShortcut">
       <CircleX class="text-destructive-foreground" />
     </Button>
