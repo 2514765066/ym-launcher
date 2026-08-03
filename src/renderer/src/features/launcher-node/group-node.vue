@@ -8,7 +8,7 @@
   >
     <GroupNodeIcon
       :class="{
-        'scale-110': notSelf && isHover,
+        'scale-115': notSelf && isHover,
       }"
       :id="data.id"
     />
