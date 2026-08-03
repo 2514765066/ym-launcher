@@ -1,5 +1,4 @@
 import { nanoid } from 'nanoid';
-import pinyin from 'pinyin';
 import type { AppNode } from '@shared/type';
 import { useDesktopStore } from './desktop';
 import { useGroupStore } from './group';
@@ -184,12 +183,15 @@ export const useCoreStore = defineStore('core', () => {
   };
 
   // 重命名节点
-  const renameNode = (id: string, label: string) => {
+  const renameNode = async (id: string, label: string) => {
     // 需要重命名的节点
     const node = getNode(id);
 
+    // 名称对应的搜索拼音
+    const keyword = await ipc.getPinyin(label);
+
     node.label = label;
-    node.keyword = pinyin(label).join('');
+    node.keyword = keyword;
   };
 
   return {

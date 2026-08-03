@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 import { basename, extname } from 'path';
 import type { AppNode } from '@shared/type';
 import { shell } from 'electron';
-import pinyin from 'pinyin';
+import { getPinyinKeyword } from './pinyin';
 
 // 将应用路径转换为启动台节点
 export const formatApps = async (paths: string[]): Promise<AppNode[]> => {
@@ -24,7 +24,7 @@ export const formatApps = async (paths: string[]): Promise<AppNode[]> => {
       id: nanoid(),
       label,
       path: target,
-      keyword: pinyin(label).join(''),
+      keyword: getPinyinKeyword(label),
       kind: 'app',
     };
   });
@@ -40,7 +40,7 @@ export const formatFolders = (paths: string[]): AppNode[] => {
       id: nanoid(),
       label,
       path,
-      keyword: pinyin(label).join(''),
+      keyword: getPinyinKeyword(label),
       kind: 'app',
     };
   });

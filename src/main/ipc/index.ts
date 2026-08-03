@@ -8,6 +8,12 @@ import { setHotCorner as _setHotCorner } from '../hooks/hot-corner';
 import { setStartShortcut as _setStartShortcut } from '../hooks/start-shortcut';
 import type { HotCornerPosition } from '@shared/type';
 import { getPathIcon } from '../utils/icon';
+import { getPinyinKeyword } from '../utils/pinyin';
+
+// 获取名称对应的搜索拼音
+export const getPinyin = (_, label: string) => {
+  return getPinyinKeyword(label);
+};
 
 //获取壁纸
 export const getWallpaper = async () => {
