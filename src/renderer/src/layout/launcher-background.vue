@@ -1,7 +1,10 @@
 <template>
-  <section class="size-screen relative overflow-hidden">
-    <img class="size-full absolute inset-0 object-cover" :src="wallpaper" />
-
+  <section
+    class="size-screen overflow-hidden bg-top bg-cover bg-no-repeat"
+    :style="{
+      backgroundImage: `url(${wallpaper})`,
+    }"
+  >
     <div
       class="size-full"
       :style="{
