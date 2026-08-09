@@ -45,6 +45,7 @@ export const createMainWindow = () => {
     bw.webContents.send('show');
     bw.setOpacity(0);
     bw.show();
+    bw.focus();
 
     setTimeout(() => {
       bw.setOpacity(1);
