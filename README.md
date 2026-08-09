@@ -34,7 +34,7 @@
 
 ## 界面预览
 
-![Ym Launcher 预览](./docs/preview.png)
+![Ym Launcher 预览](./docs/assets/preview.png)
 
 ## 下载 Ym Launcher
 
@@ -49,4 +49,3 @@
 ## 许可证
 
 本项目采用 [GPL-3.0-or-later](./LICENSE) 许可证。
-
