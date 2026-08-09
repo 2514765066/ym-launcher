@@ -52,8 +52,5 @@ export const createMainWindow = () => {
     }, 100);
   };
 
-  return {
-    bw,
-    show,
-  };
+  return [bw, show] as const;
 };

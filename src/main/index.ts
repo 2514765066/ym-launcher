@@ -14,14 +14,12 @@ if (!app.requestSingleInstanceLock()) {
 }
 
 app.whenReady().then(() => {
-  const main = createMainWindow();
+  const [main, show] = createMainWindow();
 
   const tray = createTray([
     {
       label: `打开 ${productName}`,
-      click() {
-        main.show();
-      },
+      click: show,
     },
     {
       type: 'separator',
@@ -34,11 +32,11 @@ app.whenReady().then(() => {
     },
   ]);
 
-  tray.on('click', main.show);
+  tray.on('click', show);
 
   const toggleMainWindowVisible = () => {
-    if (main.bw.isVisible()) {
-      main.bw.hide();
+    if (main.isVisible()) {
+      main.hide();
       return;
     }
 
@@ -46,7 +44,7 @@ app.whenReady().then(() => {
       return;
     }
 
-    main.show();
+    show();
   };
 
   createHotCorner(toggleMainWindowVisible);
@@ -57,5 +55,5 @@ app.whenReady().then(() => {
     optimizer.watchWindowShortcuts(window);
   });
 
-  app.on('second-instance', main.show);
+  app.on('second-instance', show);
 });
