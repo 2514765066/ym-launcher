@@ -1,7 +1,7 @@
 {
   "name": "ym-launcher",
   "productName": "Ym Launcher",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A modern and customizable Windows application launcher",
   "private": true,
   "license": "GPL-3.0-or-later",
