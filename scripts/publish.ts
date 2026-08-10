@@ -14,13 +14,13 @@ if (!GITEE_TOKEN || !GH_TOKEN) {
 const giteeRelease = useGiteeReleases({
   token: GITEE_TOKEN!,
   repo: name,
-  owner: 'yxingyus',
+  owner: 'zmy-devs',
 });
 
 const githubRelease = useGithubReleases({
   token: GH_TOKEN!,
   repo: name,
-  owner: '2514765066',
+  owner: 'zmy-devs',
 });
 
 //获取更新内容

@@ -8,9 +8,9 @@ import {
 import { appName } from '@shared/app-info';
 import type { HotCornerPosition } from '@shared/type';
 
-export const issueUrl = `https://github.com/2514765066/${appName}/issues`;
+export const issueUrl = `https://github.com/zmy-devs/${appName}/issues`;
 
-export const updateContentUrl = `https://github.com/2514765066/${appName}/blob/main/docs/release-note.md`;
+export const updateContentUrl = `https://github.com/zmy-devs/${appName}/blob/main/docs/release-note.md`;
 
 export const updateMap = {
   checking: '正在检查更新...',

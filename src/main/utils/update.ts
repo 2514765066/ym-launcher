@@ -5,7 +5,7 @@ import { is } from '@electron-toolkit/utils';
 
 autoUpdater.autoDownload = false;
 autoUpdater.setFeedURL(
-  `https://gitee.com/yxingyus/${appName}/releases/download/latest`,
+  `https://gitee.com/zmy-devs/${appName}/releases/download/latest`,
 );
 
 if (is.dev) {

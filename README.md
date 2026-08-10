@@ -7,15 +7,15 @@
     Ym Launcher 是一款专门为windows开发的应用启动台
     <br>
     <br>
-    <a href="https://gitee.com/yxingyus/ym-launcher/releases">
+    <a href="https://gitee.com/zmy-devs/ym-launcher/releases">
     Gitee
     </a>
     &middot;
-    <a href="https://github.com/2514765066/ym-launcher">
+    <a href="https://github.com/zmy-devs/ym-launcher">
     Github
     </a>
     &middot;
-    <a href="https://github.com/2514765066/ym-launcher/blob/main/docs/release-note.md">
+    <a href="https://github.com/zmy-devs/ym-launcher/blob/main/docs/release-note.md">
     更新内容
     </a>
   </p>
@@ -38,11 +38,11 @@
 
 ## 下载 Ym Launcher
 
-<a href="https://gitee.com/yxingyus/ym-launcher/releases/latest">
+<a href="https://gitee.com/zmy-devs/ym-launcher/releases/latest">
 使用Gitee下载
 </a>
 
-<a href="https://github.com/2514765066/ym-launcher/releases/latest">
+<a href="https://github.com/zmy-devs/ym-launcher/releases/latest">
 使用Github下载
 </a>
 

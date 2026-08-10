@@ -8,11 +8,11 @@
   "author": {
     "name": "Mingyang Zhang",
     "email": "2514765066@qq.com",
-    "url": "https://github.com/2514765066"
+    "url": "https://github.com/zmy-devs"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/2514765066/ym-launcher.git"
+    "url": "https://github.com/zmy-devs/ym-launcher.git"
   },
   "main": "./out/main/index.js",
   "type": "module",
