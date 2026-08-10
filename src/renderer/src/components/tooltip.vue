@@ -18,7 +18,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
-import Kbd from '@/components/ui/kbd/Kbd.vue';
+import { Kbd } from '@/components/ui/kbd';
 
 defineProps<{
   content?: string;
