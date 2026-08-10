@@ -13,7 +13,7 @@
         </ItemContent>
 
         <ItemActions>
-          <Button variant="outline" @click="handleIssue">反馈</Button>
+          <Button size="sm" variant="outline" @click="handleIssue">反馈</Button>
         </ItemActions>
       </Item>
 
@@ -41,7 +41,9 @@
         </ItemContent>
 
         <ItemActions>
-          <Button variant="destructive" @click="handleReset">重置</Button>
+          <Button size="sm" variant="destructive" @click="handleReset">
+            重置
+          </Button>
         </ItemActions>
       </Item>
     </ItemGroup>
