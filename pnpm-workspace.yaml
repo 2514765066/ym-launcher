@@ -12,3 +12,5 @@ minimumReleaseAgeExclude:
   - ym-fullscreen-detector@0.1.2
   - plugin-electron-ipc@0.1.2
   - vite@8.2.0
+  - '@lucide/vue@1.31.0'
+  - reka-ui@2.10.3
